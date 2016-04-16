@@ -26082,8 +26082,6 @@ var React = _interopRequireWildcard(_react);
 
 var _reactRedux = require('react-redux');
 
-var _reactRouter = require('react-router');
-
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 var navHeader = function navHeader(_ref) {
@@ -26094,18 +26092,18 @@ var navHeader = function navHeader(_ref) {
 		'div',
 		{ className: 'jumbotron' },
 		React.createElement(
-			_reactRouter.Link,
-			{ to: 'home' },
+			'a',
+			{ href: '/' },
 			'Home'
 		),
 		React.createElement(
-			_reactRouter.Link,
-			{ to: 'menu' },
+			'a',
+			{ href: '/menu' },
 			'Menu'
 		),
 		React.createElement(
-			_reactRouter.Link,
-			{ to: 'location' },
+			'a',
+			{ href: '/location' },
 			'Location'
 		)
 	);
@@ -26126,7 +26124,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 module.exports = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(navHeader);
 
-},{"react":237,"react-redux":57,"react-router":94}],249:[function(require,module,exports){
+},{"react":237,"react-redux":57}],249:[function(require,module,exports){
 'use strict';
 
 // packages
@@ -26206,7 +26204,7 @@ var MenuPage = function MenuPage() {
 		React.createElement(
 			"h1",
 			null,
-			"Menu Page"
+			"Menu Page123"
 		)
 	);
 };

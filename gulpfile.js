@@ -4,7 +4,6 @@ var gulp       = require('gulp');
 var connect    = require('gulp-connect'); // Runs a local dev server
 var open       = require('gulp-open'); // Open a URL in a webbrowser
 var browserify = require('browserify'); // Bundles JS
-var reactify   = require('reactify'); // Transforms React JSX to JS
 var source     = require('vinyl-source-stream'); // Use conventional text stream with Gulp
 var concat     = require('gulp-concat'); // concatenates files
 var babelify   = require('babelify');
@@ -25,7 +24,7 @@ var config = {
   }
 }
 
-//=====================
+//========== LOCAL ===========
 
 // Local
 gulp.task('connect', function() {
@@ -74,23 +73,8 @@ gulp.task('watch', function() {
    gulp.watch(config.paths.js, ['js']);
 });
 
-//=====================
+//========== PRODUCTION ===========
 
-// Production
-gulp.task('serveprod', function() {
-  connect.server({
-    root: ['dist'],
-    port: process.env.PORT || config.port,
-    livereload: false
-  });
-});
-
-//gulp.task('open', ['connect'], function() {
-//  gulp.src('dist/index.html')
-//      .pipe(open({ uri: config.devBaseUrl + ':' + config.port + '/' }))
-//});
-
-// go get any html file and send it to our destination file and then reload using connect
 gulp.task('htmlprod', function(){
   gulp.src(config.paths.html)
     .pipe(gulp.dest(config.paths.dist))
@@ -111,5 +95,5 @@ gulp.task('cssprod', function(){
     .pipe(gulp.dest(config.paths.dist + '/css'))
 })
 
-gulp.task('default', ['htmlprod', 'jsprod', 'cssprod', 'serveprod']);
+gulp.task('default', ['htmlprod', 'jsprod', 'cssprod']);
 gulp.task('dev', ['html', 'js', 'open', 'watch', 'css']);

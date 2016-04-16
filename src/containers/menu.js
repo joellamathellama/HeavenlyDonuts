@@ -4,7 +4,7 @@ var connect = require("react-redux").connect;
 var MenuPage = function() {
 	return (
 		<div>
-			<h1>Menu Page</h1>
+			<h1>Menu Page123</h1>
 		</div>
 	);
 }
