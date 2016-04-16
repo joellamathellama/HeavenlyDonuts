@@ -26074,107 +26074,223 @@ module.exports = warning;
 
 }).call(this,require('_process'))
 },{"_process":52}],248:[function(require,module,exports){
-// var React = require('react');
-// var connect = require("react-redux").connect;
+'use strict';
 
-// var MiddleDiv = function() {
-// 	return (
-// 		<h1>Hello</h1>
-// 	);
-// }
+var _react = require('react');
 
-// var mapStateToProps = function(state) {
-// 	return {
+var React = _interopRequireWildcard(_react);
 
-// 	};
-// }
+var _reactRedux = require('react-redux');
 
-// var mapDispatchToProps = function(dispatch) {
-// 	return {
+var _reactRouter = require('react-router');
 
-// 	};
-// }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
-// module.exports = connect(mapStateToProps, mapDispatchToProps)(MiddleDiv);
+var navHeader = function navHeader(_ref) {
+	var sts = _ref.sts;
+	var dsp = _ref.dsp;
+
+	return React.createElement(
+		'div',
+		{ className: 'jumbotron' },
+		React.createElement(
+			_reactRouter.Link,
+			{ to: 'home' },
+			'Home'
+		),
+		React.createElement(
+			_reactRouter.Link,
+			{ to: 'menu' },
+			'Menu'
+		),
+		React.createElement(
+			_reactRouter.Link,
+			{ to: 'location' },
+			'Location'
+		)
+	);
+};
+
+var mapStateToProps = function mapStateToProps(state) {
+	console.info("Container State: ", state);
+	return {
+		sts: {}
+	};
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+	return {
+		dsp: {}
+	};
+};
+
+module.exports = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(navHeader);
+
+},{"react":237,"react-redux":57,"react-router":94}],249:[function(require,module,exports){
+"use strict";
 
 var React = require('react');
+var connect = require("react-redux").connect;
 
-var Home = React.createClass({displayName: "Home",
-  render: function(){
-    return (
-      React.createElement("div", {className: "jumbotron"}, 
-        React.createElement("h1", null, "Hello"), 
-        React.createElement("p", null, "home")
-      )
-    );
-  }
-});
-
-module.exports = Home;
-
-},{"react":237}],249:[function(require,module,exports){
-// packages
-var React          = require('react');
-var ReactDOM       = require('react-dom');
-var ReactRouter    = require('react-router');
-var Router         = ReactRouter.Router;
-var Route          = ReactRouter.Route;
-// components
-var Home					 = require('./containers/homePage');
-// require store
-var Provider       = require('react-redux').Provider;
-var Store          = require('./store');
-var store          = Store();
-// require history and sync it with the store
-var syncHiStore    = require('react-router-redux').syncHistoryWithStore;
-var browserHistory = ReactRouter.browserHistory;
-var history        = syncHiStore(browserHistory, store);
-
-ReactDOM.render(
-	React.createElement(Provider, {store: store}, 
-		React.createElement(Router, {history: history}, 
-			React.createElement(Route, {name: "Home", path: "/", component: Home})
+var homePage = function homePage() {
+	return React.createElement(
+		"div",
+		null,
+		React.createElement(
+			"h1",
+			null,
+			"Home Page"
 		)
-	),
-	document.getElementById('app')
-);
+	);
+};
 
-},{"./containers/homePage":248,"./store":252,"react":237,"react-dom":54,"react-redux":57,"react-router":94,"react-router-redux":63}],250:[function(require,module,exports){
+var mapStateToProps = function mapStateToProps(state) {
+	return {};
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+	return {};
+};
+
+module.exports = connect(mapStateToProps, mapDispatchToProps)(homePage);
+
+},{"react":237,"react-redux":57}],250:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var connect = require("react-redux").connect;
+
+var MenuPage = function MenuPage() {
+	return React.createElement(
+		"div",
+		null,
+		React.createElement(
+			"h1",
+			null,
+			"Menu Page"
+		)
+	);
+};
+
+var mapStateToProps = function mapStateToProps(state) {
+	return {};
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+	return {};
+};
+
+var WrappedMenuPage = connect(mapStateToProps, mapDispatchToProps)(MenuPage);
+
+module.exports = WrappedMenuPage;
+
+},{"react":237,"react-redux":57}],251:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var connect = require("react-redux").connect;
+
+var ourLocation = function ourLocation() {
+	return React.createElement(
+		"div",
+		null,
+		React.createElement(
+			"h1",
+			null,
+			"Location Page"
+		)
+	);
+};
+
+var mapStateToProps = function mapStateToProps(state) {
+	return {};
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+	return {};
+};
+
+var WrappedLocation = connect(mapStateToProps, mapDispatchToProps)(ourLocation);
+
+module.exports = WrappedLocation;
+
+},{"react":237,"react-redux":57}],252:[function(require,module,exports){
+'use strict';
+
+// packages
+var React = require('react');
+var ReactDOM = require('react-dom');
+var ReactRouter = require('react-router');
+var Router = ReactRouter.Router;
+var Route = ReactRouter.Route;
+// components
+var NavHeader = require('./NavHeader');
+var Home = require('./containers/homePage');
+var Menu = require('./containers/menu');
+var Location = require('./containers/ourLocation');
+// require store
+var Provider = require('react-redux').Provider;
+var store = require('./store')();
+// require history and sync it with the store
+var syncHiStore = require('react-router-redux').syncHistoryWithStore;
+var browserHistory = ReactRouter.browserHistory;
+var history = syncHiStore(browserHistory, store);
+
+ReactDOM.render(React.createElement(
+	Provider,
+	{ store: store },
+	React.createElement(
+		Router,
+		{ history: history },
+		React.createElement(Route, { path: '/', component: NavHeader }),
+		React.createElement(Route, { path: '/home', component: Home }),
+		React.createElement(Route, { path: 'menu', component: Menu }),
+		React.createElement(Route, { path: 'location', component: Location })
+	)
+), document.getElementById('app'));
+
+},{"./NavHeader":248,"./containers/homePage":249,"./containers/menu":250,"./containers/ourLocation":251,"./store":255,"react":237,"react-dom":54,"react-redux":57,"react-router":94,"react-router-redux":63}],253:[function(require,module,exports){
+'use strict';
+
 var combineReducers = require('redux').combineReducers;
-var routerReducer   = require('react-router-redux').routerReducer;
-var test            = require('./testReducer');
+var routerReducer = require('react-router-redux').routerReducer;
+var test = require('./testReducer');
 
 // combineReducers function is called to combine all relavent reducers
 // and have it connect to the store when the store is creaed
 var Reducer = combineReducers({
-  test,
+  test: test,
   routing: routerReducer
 });
 
 module.exports = Reducer;
 
-},{"./testReducer":251,"react-router-redux":63,"redux":244}],251:[function(require,module,exports){
-const Test = (state, action) => {
-  if(state === undefined){
+},{"./testReducer":254,"react-router-redux":63,"redux":244}],254:[function(require,module,exports){
+"use strict";
+
+var Test = function Test(state, action) {
+  if (state === undefined) {
     return state = {};
   }
-  switch(action.type){
-  	default:
-  		return state;
+  switch (action.type) {
+    default:
+      return state;
   }
 };
 
 module.exports = Test;
 
-},{}],252:[function(require,module,exports){
+},{}],255:[function(require,module,exports){
+'use strict';
+
 var createStore = require('redux').createStore;
 var compose = require('redux').compose;
 var applyMiddleware = require('redux').applyMiddleware;
 var reducer = require('./reducers/reducer');
 var thunk = require('redux-thunk');
 
-module.exports = () => {
+module.exports = function () {
   return createStore(reducer, {}, applyMiddleware(thunk.default));
 };
 
-},{"./reducers/reducer":250,"redux":244,"redux-thunk":238}]},{},[249]);
+},{"./reducers/reducer":253,"redux":244,"redux-thunk":238}]},{},[252]);

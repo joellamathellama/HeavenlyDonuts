@@ -1,10 +1,10 @@
 var React = require('react');
 var connect = require("react-redux").connect;
 
-var homePage = function() {
+var ourLocation = function() {
 	return (
 		<div>
-			<h1>Home Page</h1>
+			<h1>Location Page</h1>
 		</div>
 	);
 }
@@ -21,4 +21,6 @@ var mapDispatchToProps = function(dispatch) {
 	};
 }
 
-module.exports = connect(mapStateToProps, mapDispatchToProps)(homePage);
+var WrappedLocation = connect(mapStateToProps, mapDispatchToProps)(ourLocation);
+
+module.exports = WrappedLocation;
