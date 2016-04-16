@@ -12,6 +12,7 @@ var babelify   = require('babelify');
 var config = {
   port: 8000,
   devBaseUrl: 'http://localhost',
+  prodBase: process.env.PORT,
   paths: {
     html: './src/*.html',
     js: './src/**/*.js',
@@ -29,14 +30,14 @@ var config = {
 gulp.task('connect', function() {
     connect.server({
           root: ['dist'],
-          port: process.env.PORT || config.port,
+          port: config.prodBase || config.port,
           livereload: true
     })
 });
 
 gulp.task('open', ['connect'], function() {
   gulp.src('dist/index.html')
-      .pipe(open({ uri: config.devBaseUrl + ':' + config.port + '/' }))
+      .pipe(open({ uri: config.prodBase || config.devBaseUrl + ':' + config.port + '/' }))
 });
 
 // go get any html file and send it to our destination file and then reload using connect
@@ -69,5 +70,5 @@ gulp.task('watch', function() {
    gulp.watch(config.paths.js, ['js']);
 });
 
-gulp.task('default', ['html', 'js', 'open', 'watch', 'css']);
-gulp.task('dev', ['html', 'js', 'watch', 'css']);
+gulp.task('default', ['html', 'js', 'watch', 'css']);
+gulp.task('dev', ['html', 'js', 'open', 'watch', 'css']);

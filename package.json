@@ -4,9 +4,9 @@
   "description": "Heavenly Donuts Website",
   "main": "server/index.js",
   "scripts": {
-    "start": "node app",
-    "dev": "gulp dev",
-    "postinstall": "gulp default"
+    "build": "gulp",
+    "start": "node app.js",
+    "dev": "gulp dev"
   },
   "author": "Joel Ahn",
   "license": "ISC",
