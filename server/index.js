@@ -7,9 +7,17 @@ var routes = express.Router()
 var assetFolder = Path.resolve(__dirname, '../dist')
 routes.use(express.static(assetFolder))
 
-routes.get('/*', function(req,res) {
-	res.sendFile(assetFolder + '/index.html');
+routes.get('/bundle.js', function(req,res) {
+	res.sendFile(assetFolder + '/scripts/bundle.js')
 })
+
+// routes.get('/', function(req, res) {
+
+// })
+
+// routes.get('/*', function(req,res) {
+// 	res.sendFile(assetFolder + '/index.html')
+// })
 
 if (process.env.NODE_ENV !== 'test') {
 	var app = express()

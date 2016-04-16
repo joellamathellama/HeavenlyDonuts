@@ -4,7 +4,7 @@ var connect = require("react-redux").connect;
 var ourLocation = function() {
 	return (
 		<div>
-			<h1>Location Page</h1>
+			<h1>Location Page123</h1>
 		</div>
 	);
 }

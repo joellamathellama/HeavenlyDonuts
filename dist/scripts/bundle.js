@@ -26082,6 +26082,8 @@ var React = _interopRequireWildcard(_react);
 
 var _reactRedux = require('react-redux');
 
+var _reactRouter = require('react-router');
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 var navHeader = function navHeader(_ref) {
@@ -26092,18 +26094,18 @@ var navHeader = function navHeader(_ref) {
 		'div',
 		{ className: 'jumbotron' },
 		React.createElement(
-			'a',
-			{ href: '/' },
+			'button',
+			{ onClick: dsp.goHome },
 			'Home'
 		),
 		React.createElement(
-			'a',
-			{ href: '/menu' },
+			'button',
+			{ onClick: dsp.goMenu },
 			'Menu'
 		),
 		React.createElement(
-			'a',
-			{ href: '/location' },
+			'button',
+			{ onClick: dsp.goLocation },
 			'Location'
 		)
 	);
@@ -26118,13 +26120,23 @@ var mapStateToProps = function mapStateToProps(state) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 	return {
-		dsp: {}
+		dsp: {
+			goHome: function goHome() {
+				_reactRouter.browserHistory.push('/');
+			},
+			goMenu: function goMenu() {
+				_reactRouter.browserHistory.push('/menu');
+			},
+			goLocation: function goLocation() {
+				_reactRouter.browserHistory.push('/location');
+			}
+		}
 	};
 };
 
 module.exports = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(navHeader);
 
-},{"react":237,"react-redux":57}],249:[function(require,module,exports){
+},{"react":237,"react-redux":57,"react-router":94}],249:[function(require,module,exports){
 'use strict';
 
 // packages
@@ -26234,7 +26246,7 @@ var ourLocation = function ourLocation() {
 		React.createElement(
 			"h1",
 			null,
-			"Location Page"
+			"Location Page123"
 		)
 	);
 };

@@ -1,5 +1,5 @@
 "use strict";
-
+// Packages
 var gulp       = require('gulp');
 var connect    = require('gulp-connect'); // Runs a local dev server
 var open       = require('gulp-open'); // Open a URL in a webbrowser
@@ -11,7 +11,7 @@ var babelify   = require('babelify');
 var config = {
   port: 8000,
   devBaseUrl: 'http://localhost',
-  prodBase: process.env.PORT,
+  prodBase: process.env.PORT || 8000,
   paths: {
     html: './src/*.html',
     js: './src/**/*.js',

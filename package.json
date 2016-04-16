@@ -2,7 +2,7 @@
   "name": "heavenly-donuts-website",
   "version": "1.0.0",
   "description": "Heavenly Donuts Website",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
     "build": "gulp default",
     "start": "node server/index.js --ignore dist/",
