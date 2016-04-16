@@ -26127,94 +26127,6 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 module.exports = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(navHeader);
 
 },{"react":237,"react-redux":57,"react-router":94}],249:[function(require,module,exports){
-"use strict";
-
-var React = require('react');
-var connect = require("react-redux").connect;
-
-var homePage = function homePage() {
-	return React.createElement(
-		"div",
-		null,
-		React.createElement(
-			"h1",
-			null,
-			"Home Page"
-		)
-	);
-};
-
-var mapStateToProps = function mapStateToProps(state) {
-	return {};
-};
-
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-	return {};
-};
-
-module.exports = connect(mapStateToProps, mapDispatchToProps)(homePage);
-
-},{"react":237,"react-redux":57}],250:[function(require,module,exports){
-"use strict";
-
-var React = require('react');
-var connect = require("react-redux").connect;
-
-var MenuPage = function MenuPage() {
-	return React.createElement(
-		"div",
-		null,
-		React.createElement(
-			"h1",
-			null,
-			"Menu Page"
-		)
-	);
-};
-
-var mapStateToProps = function mapStateToProps(state) {
-	return {};
-};
-
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-	return {};
-};
-
-var WrappedMenuPage = connect(mapStateToProps, mapDispatchToProps)(MenuPage);
-
-module.exports = WrappedMenuPage;
-
-},{"react":237,"react-redux":57}],251:[function(require,module,exports){
-"use strict";
-
-var React = require('react');
-var connect = require("react-redux").connect;
-
-var ourLocation = function ourLocation() {
-	return React.createElement(
-		"div",
-		null,
-		React.createElement(
-			"h1",
-			null,
-			"Location Page"
-		)
-	);
-};
-
-var mapStateToProps = function mapStateToProps(state) {
-	return {};
-};
-
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-	return {};
-};
-
-var WrappedLocation = connect(mapStateToProps, mapDispatchToProps)(ourLocation);
-
-module.exports = WrappedLocation;
-
-},{"react":237,"react-redux":57}],252:[function(require,module,exports){
 'use strict';
 
 // packages
@@ -26253,7 +26165,95 @@ ReactDOM.render(React.createElement(
 		)
 ), document.getElementById('app'));
 
-},{"./NavHeader":248,"./containers/homePage":249,"./containers/menu":250,"./containers/ourLocation":251,"./store":255,"react":237,"react-dom":54,"react-redux":57,"react-router":94,"react-router-redux":63}],253:[function(require,module,exports){
+},{"./NavHeader":248,"./containers/homePage":250,"./containers/menu":251,"./containers/ourLocation":252,"./store":255,"react":237,"react-dom":54,"react-redux":57,"react-router":94,"react-router-redux":63}],250:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var connect = require("react-redux").connect;
+
+var homePage = function homePage() {
+	return React.createElement(
+		"div",
+		null,
+		React.createElement(
+			"h1",
+			null,
+			"Home Page"
+		)
+	);
+};
+
+var mapStateToProps = function mapStateToProps(state) {
+	return {};
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+	return {};
+};
+
+module.exports = connect(mapStateToProps, mapDispatchToProps)(homePage);
+
+},{"react":237,"react-redux":57}],251:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var connect = require("react-redux").connect;
+
+var MenuPage = function MenuPage() {
+	return React.createElement(
+		"div",
+		null,
+		React.createElement(
+			"h1",
+			null,
+			"Menu Page"
+		)
+	);
+};
+
+var mapStateToProps = function mapStateToProps(state) {
+	return {};
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+	return {};
+};
+
+var WrappedMenuPage = connect(mapStateToProps, mapDispatchToProps)(MenuPage);
+
+module.exports = WrappedMenuPage;
+
+},{"react":237,"react-redux":57}],252:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var connect = require("react-redux").connect;
+
+var ourLocation = function ourLocation() {
+	return React.createElement(
+		"div",
+		null,
+		React.createElement(
+			"h1",
+			null,
+			"Location Page"
+		)
+	);
+};
+
+var mapStateToProps = function mapStateToProps(state) {
+	return {};
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+	return {};
+};
+
+var WrappedLocation = connect(mapStateToProps, mapDispatchToProps)(ourLocation);
+
+module.exports = WrappedLocation;
+
+},{"react":237,"react-redux":57}],253:[function(require,module,exports){
 'use strict';
 
 var combineReducers = require('redux').combineReducers;
@@ -26297,4 +26297,4 @@ module.exports = function () {
   return createStore(reducer, {}, applyMiddleware(thunk.default));
 };
 
-},{"./reducers/reducer":253,"redux":244,"redux-thunk":238}]},{},[252]);
+},{"./reducers/reducer":253,"redux":244,"redux-thunk":238}]},{},[249]);

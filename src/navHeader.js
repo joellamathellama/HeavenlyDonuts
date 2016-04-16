@@ -9,7 +9,7 @@ var navHeader = function({sts, dsp}) {
 			<Link to="menu">Menu</Link>
 			<Link to="location">Location</Link>
 		</div>
-	);
+	)
 }
 
 var mapStateToProps = function(state) {
