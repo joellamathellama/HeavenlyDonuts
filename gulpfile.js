@@ -70,3 +70,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['html', 'js', 'open', 'watch', 'css']);
+gulp.task('dev', ['html', 'js', 'watch', 'css']);

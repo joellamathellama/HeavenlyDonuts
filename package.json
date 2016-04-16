@@ -5,6 +5,7 @@
   "main": "server/index.js",
   "scripts": {
     "start": "node app",
+    "dev": "gulp dev",
     "postinstall": "gulp default"
   },
   "author": "Joel Ahn",
