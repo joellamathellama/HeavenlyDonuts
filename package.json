@@ -5,8 +5,7 @@
   "main": "server/index.js",
   "scripts": {
     "build": "gulp default",
-    "start": "node server/index.js --ignore dist/",
-    "dev": "gulp dev"
+    "start": "node server/index.js"
   },
   "author": "Joel Ahn",
   "license": "ISC",

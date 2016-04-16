@@ -26216,7 +26216,7 @@ var MenuPage = function MenuPage() {
 		React.createElement(
 			"h1",
 			null,
-			"Menu Page123"
+			"Menu Page"
 		)
 	);
 };

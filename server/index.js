@@ -15,9 +15,9 @@ routes.get('/bundle.js', function(req,res) {
 
 // })
 
-// routes.get('/*', function(req,res) {
-// 	res.sendFile(assetFolder + '/index.html')
-// })
+routes.get('/*', function(req,res) {
+	res.sendFile(assetFolder + '/index.html')
+})
 
 if (process.env.NODE_ENV !== 'test') {
 	var app = express()
