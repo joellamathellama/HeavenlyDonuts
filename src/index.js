@@ -19,12 +19,14 @@ var history        = syncHiStore(browserHistory, store);
 
 ReactDOM.render(
 	<Provider store={store}>
-			<Router history={history}>
-				<Route path="/" component={NavHeader}/>
-				<Route path="/home" component={Home}/>
-				<Route path="menu" component={Menu}/>
-				<Route path="location" component={Location}/>
-			</Router>
+			<div>
+				<NavHeader/>
+				<Router history={history}>
+						<Route path="/" component={Home}/>
+						<Route path="menu" component={Menu}/>
+						<Route path="location" component={Location}/>
+				</Router>
+			</div>
 	</Provider>,
 	document.getElementById('app')
 );

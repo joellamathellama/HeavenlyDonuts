@@ -26237,16 +26237,20 @@ var browserHistory = ReactRouter.browserHistory;
 var history = syncHiStore(browserHistory, store);
 
 ReactDOM.render(React.createElement(
-	Provider,
-	{ store: store },
-	React.createElement(
-		Router,
-		{ history: history },
-		React.createElement(Route, { path: '/', component: NavHeader }),
-		React.createElement(Route, { path: '/home', component: Home }),
-		React.createElement(Route, { path: 'menu', component: Menu }),
-		React.createElement(Route, { path: 'location', component: Location })
-	)
+		Provider,
+		{ store: store },
+		React.createElement(
+				'div',
+				null,
+				React.createElement(NavHeader, null),
+				React.createElement(
+						Router,
+						{ history: history },
+						React.createElement(Route, { path: '/', component: Home }),
+						React.createElement(Route, { path: 'menu', component: Menu }),
+						React.createElement(Route, { path: 'location', component: Location })
+				)
+		)
 ), document.getElementById('app'));
 
 },{"./NavHeader":248,"./containers/homePage":249,"./containers/menu":250,"./containers/ourLocation":251,"./store":255,"react":237,"react-dom":54,"react-redux":57,"react-router":94,"react-router-redux":63}],253:[function(require,module,exports){

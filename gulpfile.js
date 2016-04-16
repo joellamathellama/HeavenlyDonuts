@@ -28,11 +28,19 @@ var config = {
 //Start a local development server
 
 gulp.task('connect', function() {
-    connect.server({
-          root: ['dist'],
-          port: config.prodBase || config.port,
-          livereload: true
-    })
+  connect.server({
+    root: ['dist'],
+    port: config.port,
+    livereload: true
+  })
+});
+
+gulp.task('serveprod', function() {
+  connect.server({
+    root: ['dist'],
+    port: process.env.PORT || config.port, // localhost:5000
+    livereload: false
+  });
 });
 
 gulp.task('open', ['connect'], function() {
@@ -70,5 +78,33 @@ gulp.task('watch', function() {
    gulp.watch(config.paths.js, ['js']);
 });
 
-gulp.task('default', ['html', 'js', 'watch', 'css']);
+//=====================
+
+gulp.task('open', ['connect'], function() {
+  gulp.src('dist/index.html')
+      .pipe(open({ uri: config.devBaseUrl + ':' + config.port + '/' }))
+});
+
+// go get any html file and send it to our destination file and then reload using connect
+gulp.task('html', function(){
+  gulp.src(config.paths.html)
+    .pipe(gulp.dest(config.paths.dist))
+})
+
+gulp.task('js', function(){
+  browserify(config.paths.indexJs)
+    .transform(babelify, {presets: ["es2015", "react", "stage-0"]})
+    .bundle()
+    .on('error', console.error.bind(console))
+    .pipe(source('bundle.js'))
+    .pipe(gulp.dest(config.paths.dist + '/scripts'))
+})
+
+gulp.task('css', function(){
+  gulp.src(config.paths.css)
+    .pipe(concat('bundle.css'))
+    .pipe(gulp.dest(config.paths.dist + '/css'))
+})
+
+gulp.task('default', ['html', 'js', 'css']);
 gulp.task('dev', ['html', 'js', 'open', 'watch', 'css']);
