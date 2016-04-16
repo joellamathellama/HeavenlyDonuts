@@ -30,7 +30,6 @@ gulp.task('connect', function() {
     connect.server({
           root: ['dist'],
           port: process.env.PORT || config.port,
-          base: config.devBaseUrl,
           livereload: true
     })
 });
