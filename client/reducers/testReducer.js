@@ -1,4 +1,4 @@
-const Test = (state, action) => {
+export const Test = (state, action) => {
   if(state === undefined){
     return state = {};
   }
@@ -7,5 +7,3 @@ const Test = (state, action) => {
   		return state;
   }
 };
-
-module.exports = Test;

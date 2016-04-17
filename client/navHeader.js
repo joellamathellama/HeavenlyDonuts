@@ -1,18 +1,20 @@
 import * as React from 'react';
 import {connect} from 'react-redux';
+// imported to switch routes faster
 import {browserHistory} from 'react-router';
+// Component
+import {NavButtons} from './components/navBarComps/navButtons';
 
-var navHeader = function({sts, dsp}) {
+const navHeader = function({sts, dsp}) {
 	return (
 		<div className="jumbotron">
-			<button onClick={dsp.goHome}>Home</button>
-			<button onClick={dsp.goMenu}>Menu</button>
-			<button onClick={dsp.goLocation}>Location</button>
+			<center><h1>Heavenly Donuts</h1></center>
+			<NavButtons/>
 		</div>
 	)
 }
 
-var mapStateToProps = function(state) {
+const mapStateToProps = function(state) {
 	console.info("Container State: ", state);
 	return {
 		sts:{
@@ -21,7 +23,7 @@ var mapStateToProps = function(state) {
 	};
 }
 
-var mapDispatchToProps = function(dispatch) {
+const mapDispatchToProps = function(dispatch) {
 	return {
 		dsp:{
 			goHome() {
@@ -37,4 +39,4 @@ var mapDispatchToProps = function(dispatch) {
 	};
 }
 
-module.exports = connect(mapStateToProps, mapDispatchToProps)(navHeader);
+export const NavHeader = connect(mapStateToProps, mapDispatchToProps)(navHeader);
