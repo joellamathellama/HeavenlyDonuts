@@ -1,2 +1,2 @@
 # HeavenlyDonuts
-Beta website in progress
+### <b>Alpha site</b> - in progress
