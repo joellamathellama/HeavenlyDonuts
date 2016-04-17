@@ -1,6 +1,7 @@
 /* 
 TABLE OF CONTENTS
 - Navbar
+- RoadWork
 */
 
 /* NavBar */
@@ -8,4 +9,25 @@ TABLE OF CONTENTS
 	padding-top: 5px;
 	padding-bottom: 0px;
 	margin-bottom: 15px;
+}
+#navName h1{
+	float: left;
+	height: 75px;
+	width: 550px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+#navRight{
+	float: right;
+	height: 75px;
+	width: 250px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+/* RoadWork */
+#travoltaGIF{
+	height: auto;
+	width: auto;
+	max-height: 200px; 
+	max-width: 150px;
 }

@@ -5,7 +5,6 @@ import {Provider} from 'react-redux';
 import {Route, Router, browserHistory} from 'react-router';
 import {syncHistoryWithStore} from 'react-router-redux';
 // Components
-// const NavHeader = require('./NavHeader');
 import {NavHeader} from './NavHeader';
 import {HomeContainer} from './containers/homeCont';
 import {MenuContainer} from './containers/menuCont';

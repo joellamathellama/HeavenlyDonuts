@@ -1,6 +1,6 @@
+// Packages
 import * as React from 'react';
 import {connect} from 'react-redux';
-// imported to switch routes faster
 import {browserHistory} from 'react-router';
 // Component
 import {NavButtons} from './components/navBarComps/navButtons';
@@ -8,8 +8,13 @@ import {NavButtons} from './components/navBarComps/navButtons';
 const navHeader = function({sts, dsp}) {
 	return (
 		<div className="jumbotron">
-			<center><h1>Heavenly Donuts</h1></center>
-			<NavButtons/>
+			<div id="navName">
+				<h1>Heavenly Donuts</h1>
+			</div>
+			<div id="navRight">
+				Navigation right(Temporary)
+			</div>
+			<NavButtons sts={sts} dsp={dsp}/>
 		</div>
 	)
 }
