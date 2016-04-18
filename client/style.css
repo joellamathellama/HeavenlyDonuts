@@ -1,15 +1,30 @@
 /* 
 TABLE OF CONTENTS
 - Navbar
-- RoadWork
+- Alerts
+- Home
 - Menu
 */
 
+/* Alerts */
+#travoltaGIF{
+	height: auto;
+	width: auto;
+	max-height: 200px; 
+	max-width: 150px;
+}
+#loadingGIF{
+	height: auto;
+	width: auto;
+	max-height: 300px; 
+	max-width: 250px;
+
+}
 /* NavBar */
 .jumbotron{
 	padding-top: 5px;
 	padding-bottom: 0px;
-	margin-bottom: 15px;
+	margin-bottom: 25px;
 }
 #navName h1{
 	float: left;
@@ -25,12 +40,14 @@ TABLE OF CONTENTS
 	margin: 0px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
 }
-/* RoadWork */
-#travoltaGIF{
+/* Home */
+#homeContainer{
 	height: auto;
 	width: auto;
-	max-height: 200px; 
-	max-width: 150px;
+	min-height: 1000px;
+	max-width: 80%;
+	border: 1px solid black;
+	margin: 0px auto;
 }
 /* Menu */
 #mainMenu{

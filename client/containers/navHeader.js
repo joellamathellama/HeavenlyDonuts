@@ -9,7 +9,7 @@ const navHeader = function({sts, dsp}) {
 	return (
 		<div className="jumbotron">
 			<div id="navName">
-				<h1>Heavenly Donuts</h1>
+				<h1>Donut Store</h1>
 			</div>
 			<div id="navRight">
 				Navigation right(Temporary)

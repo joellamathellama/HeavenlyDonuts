@@ -1,34 +1,14 @@
 // Packages
 import * as React from 'react';
-import {connect} from "react-redux";
+import {connect} from 'react-redux';
 const R = require('react-addons-css-transition-group');
-// Components
+// Files
+import {MockData} from '../../server/mockData';
 
 const MenuPage = React.createClass({
 	getInitialState() {
 		return {
-			mockList: {
-				glaze: [
-					{
-						name: "Glaze Donut",
-						description: "baked dough, then covered in sugar glaze."
-					},
-					{
-						name: "Glaze Twist",
-						description: "baked dough, twisted, then covered in sugar glaze."
-					}
-				],
-				choco: [
-					{
-						name: "Chocolate Donut",
-						description: "baked dough, then covered in chocolate glaze."
-					},
-					{
-						name: "Chocolate Twist",
-						description: "baked dough, then covered in chocolate glaze."
-					}
-				]
-			},
+			mockList: MockData,
 			mainMenu: true,
 			glaze: false,
 			choco: false

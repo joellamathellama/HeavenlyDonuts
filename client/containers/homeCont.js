@@ -3,9 +3,8 @@ import {connect} from 'react-redux';
 import {RoadWork} from '../components/alerts/roadWork';
 
 const homePage = () => (
-	<div>
-		<RoadWork/>
-		<h1>Home Page123</h1>
+	<div id="homeContainer">
+		
 	</div>
 );
 

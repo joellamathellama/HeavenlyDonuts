@@ -1,30 +1,22 @@
-module.exports = {
-	glaze: {
-		original: {
-			name: "Original",
-			description: "baked dough, then covered in sugar glaze."
-		},
-		spicy: {
-			name: "Spicy",
-			description: "hot, hot, hot!"
-		},
-		sweet: {
-			name: "Sweet",
-			description: "Sweet as yourself"
-		}
+export const MockData = {
+glaze: [
+	{
+		name: "Glaze Donut",
+		description: "baked dough, then covered in sugar glaze."
 	},
-	choco: {
-		original: {
-			name: "Original",
-			description: "baked dough, then covered in chocolate glaze."
-		},
-		spicy: {
-			name: "Spicy",
-			description: "Hot Jungle Love"
-		},
-		sweet: {
-			name: "Sriginal",
-			description: "Chocolate bear"
-		}
+	{
+		name: "Glaze Twist",
+		description: "baked dough, twisted, then covered in sugar glaze."
 	}
+],
+choco: [
+	{
+		name: "Chocolate Donut",
+		description: "baked dough, then covered in chocolate glaze."
+	},
+	{
+		name: "Chocolate Twist",
+		description: "baked dough, then covered in chocolate glaze."
+	}
+]
 };
