@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const routes = express.Router()
 // Path
 const assetFolder = Path.resolve(__dirname, '../dist')
+console.info("asset Folder log in /bundle", assetFolder)
 routes.use(express.static(assetFolder))
 
 routes.get('/bundle.js', function(req,res) {
