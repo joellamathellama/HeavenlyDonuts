@@ -4,8 +4,8 @@
   "description": "Heavenly Donuts Website",
   "main": "index.js",
   "scripts": {
-    "build": "gulp default",
-    "start": "node server/index.js --ignore client/"
+    "start": "node server/index.js --ignore client/",
+    "postinstall": "gulp default"
   },
   "author": "Joel Ahn",
   "license": "ISC",
