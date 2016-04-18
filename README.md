@@ -7,6 +7,6 @@ $ npm install
 $ npm start
 
 $ gulp dev
-
+<hr/>
 ##### Heroku Link
 https://limitless-ravine-16196.herokuapp.com/
