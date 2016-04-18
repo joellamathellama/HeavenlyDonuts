@@ -12,8 +12,6 @@ const config = {
     js: './client/**/*.js',
     mycss: './client/*.css',
     css: [
-      './node_modules/bootstrap/dist/css/bootstrap.min.css',
-      './node_modules/bootstrap/dist/css/bootstrap-theme.min.css',
       './client/style.css'
     ],
     dist: './dist',
