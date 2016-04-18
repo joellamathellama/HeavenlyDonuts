@@ -1,4 +1,12 @@
-### Mock Website for a fake donut store
+# Mock Website for a fake donut store
+
+### Tech stack
+- React
+- Redux
+- Gulp
+- Express
+- Browserify
+- Babelify
 <hr/>
 ##### Development
 
