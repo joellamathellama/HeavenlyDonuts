@@ -1,8 +1,4 @@
-# HeavenlyDonuts
-
-## Prototype website
-
-This web page is in NO WAY a direct or accurate representation of the Heavenly Donuts business in Ennis, TX. This is a Alpha site that is being created.
+# Mock Website for a fake donut store
 
 ##### Development
 
