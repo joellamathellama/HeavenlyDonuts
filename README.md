@@ -1,5 +1,5 @@
-# Mock Website for a fake donut store
-
+### Mock Website for a fake donut store
+<hr/>
 ##### Development
 
 $ npm install
