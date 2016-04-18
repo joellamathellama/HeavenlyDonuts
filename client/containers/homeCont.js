@@ -2,22 +2,20 @@ import * as React from 'react';
 import {connect} from 'react-redux';
 import {RoadWork} from '../components/warnings/roadWork';
 
-const homePage = function() {
-	return (
-		<div>
-			<h1>Home Page</h1>
-			<RoadWork/>
-		</div>
-	);
-}
+const homePage = () => (
+	<div>
+		<RoadWork/>
+		<h1>Home Page123</h1>
+	</div>
+);
 
-const mapStateToProps = function(state) {
+const mapStateToProps = (state) => {
 	return {
 
 	};
 }
 
-const mapDispatchToProps = function(dispatch) {
+const mapDispatchToProps = (dispatch) => {
 	return {
 
 	};

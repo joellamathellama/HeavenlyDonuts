@@ -23,6 +23,7 @@ const config = {
 // Copy & pastes index.html into the dist folder
 gulp.task('html', function(){
   gulp.src(config.paths.html)
+    .on('error', console.error.bind(console))
     .pipe(gulp.dest(config.paths.dist))
 })
 // Transform & bundle into the dist folder
@@ -38,9 +39,10 @@ gulp.task('js', function(){
 gulp.task('css', function(){
   gulp.src(config.paths.css)
     .pipe(concat('bundle.css'))
+    .on('error', console.error.bind(console))
     .pipe(gulp.dest(config.paths.dist + '/css'))
 })
-// Linter(CURRENTLY NOT USED)
+// Linter(NOT IN USE)
 gulp.task('lint', function() {
   return gulp.src(config.paths.js)
     .pipe(lint({config: 'eslint.config.json'}))
