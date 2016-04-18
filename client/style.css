@@ -2,6 +2,7 @@
 TABLE OF CONTENTS
 - Navbar
 - RoadWork
+- Menu
 */
 
 /* NavBar */
@@ -30,4 +31,66 @@ TABLE OF CONTENTS
 	width: auto;
 	max-height: 200px; 
 	max-width: 150px;
+}
+/* Menu */
+#mainMenu{
+
+}
+.navMenu{
+	height: auto;
+	width: auto;
+	margin: 10px 10px 10px 10px;
+	padding: 0px 10px 0px 10px;
+	border: 3px solid black;
+	display: inline-block;
+}
+/* Save as reference */
+/*.example-enter {
+  opacity: 0.0;
+}
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 5000ms ease-in;
+}
+.example-leave {
+	opacity: 1;
+	transform: translate(0,0,0);
+	transform: translate3d(0,0,0);
+	transition-property: transform, opacity;
+	transition-duration: 500ms;
+	transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+}
+.example-leave.example-leave-active {
+	opacity: 0;
+	transform: translate(0,750px,0);
+	transform: translate3d(0,750px,0);
+}*/
+
+.fadein-enter {
+  opacity: 0.0;
+}
+.fadein-enter.fadein-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.donut{
+	height: auto;
+	width: auto;
+	margin: 10px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
+	border: 3px solid black;
+	display: inline-block;
+}
+#menuGlaze{
+	height: 100%;
+	width: 100%;
+	padding: 15px 15px 15px 15px;
+	border: 25px solid silver;
+}
+#menuChoco{
+	height: 100%;
+	width: 100%;
+	padding: 15px 15px 15px 15px;
+	border: 25px solid silver;
 }

@@ -3,7 +3,7 @@ import * as React from 'react';
 import {connect} from 'react-redux';
 import {browserHistory} from 'react-router';
 // Component
-import {NavButtons} from './components/navBarComps/navButtons';
+import {NavButtons} from '../components/navBarComps/navButtons';
 
 const navHeader = function({sts, dsp}) {
 	return (
