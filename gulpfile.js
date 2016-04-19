@@ -36,13 +36,7 @@ gulp.task('js', function(){
     .pipe(source('bundle.js'))
     .pipe(gulp.dest(config.paths.dist + '/scripts'))
 })
-// Concat into the dist folder
-//gulp.task('css', function(){
-//  gulp.src(config.paths.css)
-//    .pipe(concat('bundle.css'))
-//    .on('error', console.error.bind(console))
-//    .pipe(gulp.dest(config.paths.dist + '/css'))
-//})
+// Convert and compile scss > css
 gulp.task('scss', function () {
   return gulp.src(config.paths.scss)
     .pipe(sass().on('error', sass.logError))
