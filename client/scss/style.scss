@@ -1,3 +1,6 @@
+/* Other .scss file imports */
+@import './common/devDivs';
+
 /* 
 TABLE OF CONTENTS
 - Navbar
@@ -40,15 +43,6 @@ TABLE OF CONTENTS
 	width: 250px;
 	margin: 0px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
-}
-/* Home */
-#homeContainer{
-	height: auto;
-	width: auto;
-	min-height: 1000px;
-	max-width: 80%;
-	border: 1px solid black;
-	margin: 0px auto;
 }
 /* Menu */
 #mainMenu{
@@ -93,11 +87,11 @@ TABLE OF CONTENTS
 }
 
 .donut{
+	@include test-border;
 	height: auto;
 	width: auto;
 	margin: 10px 10px 10px 10px;
 	padding: 10px 10px 10px 10px;
-	border: 3px solid black;
 	display: inline-block;
 }
 #menuGlaze{
@@ -111,6 +105,15 @@ TABLE OF CONTENTS
 	width: 100%;
 	padding: 15px 15px 15px 15px;
 	border: 25px solid silver;
+}
+/* Home */
+#homeContainer{
+	@include test-border;
+	height: auto;
+	width: auto;
+	min-height: 5000px;
+	max-width: 80%;
+	margin: 0px auto;
 }
 /* Order */
 #orderContainer{

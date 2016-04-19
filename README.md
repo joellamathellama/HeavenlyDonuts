@@ -1,5 +1,7 @@
 # Mock Website for a fake donut store
 
+Site status: It's more of a boilerplate so far.
+
 ### Tech stack
 - React
 - Redux

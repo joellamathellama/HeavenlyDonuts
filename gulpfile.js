@@ -13,9 +13,9 @@ const config = {
   paths: {
     html: './client/*.html',
     js: './client/**/*.js',
-    myscss: './client/*.scss',
+    myscss: './client/scss/**/*.scss',
     scss: [
-      './client/style.scss'
+      './client/scss/style.scss'
     ],
     dist: './dist',
     appJs: './client/app.js'
@@ -45,7 +45,7 @@ gulp.task('js', function(){
 //})
 gulp.task('scss', function () {
   return gulp.src(config.paths.scss)
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(config.paths.dist + '/css'))
 });
 // Linter(NOT IN USE)
@@ -58,7 +58,7 @@ gulp.task('lint', function() {
 gulp.task('watch', function() {
    gulp.watch(config.paths.html, ['html'])
    gulp.watch(config.paths.js, ['js'])
-   gulp.watch(config.paths.mycss, ['scss'])
+   gulp.watch(config.paths.myscss, ['scss'])
 })
 // we'll see if I need this
 //gulp.task('sass:watch', function () {
