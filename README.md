@@ -1,6 +1,4 @@
-# Mock Website for a fake donut store
-
-Site status: It's more of a boilerplate so far.
+# Mock Website for a donut store
 
 ### Tech stack
 - React
@@ -21,4 +19,4 @@ $ npm start
 $ gulp dev
 <hr/>
 ##### Heroku Link
-https://limitless-ravine-16196.herokuapp.com/
+https://mock-donut-store.herokuapp.com/
