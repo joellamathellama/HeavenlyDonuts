@@ -1,0 +1,22 @@
+@import 'devStyles';
+
+@mixin temp-div($height, $width) {
+	min-height: $height;
+	min-width: $width;
+	max-height: $height;
+	max-width: $width;
+	border: $standard-border;
+	margin: $auto-margin;
+	padding: $standard-padding;
+	display: block;
+}
+@mixin temp-block($height, $width) {
+	min-height: $height;
+	min-width: $width;
+	max-height: $height;
+	max-width: $width;
+	border: $standard-border;
+	margin: $standard-margin;
+	padding: $standard-padding;
+	display: inline-table;
+}

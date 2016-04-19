@@ -1,6 +1,6 @@
 /* Other .scss file imports */
-@import './common/devDivs';
-
+/*@import './common/development/devProps';*/
+@import './common/development/devProps';
 /* 
 TABLE OF CONTENTS
 - Navbar
@@ -87,12 +87,7 @@ TABLE OF CONTENTS
 }
 
 .donut{
-	@include test-border;
-	height: auto;
-	width: auto;
-	margin: 10px 10px 10px 10px;
-	padding: 10px 10px 10px 10px;
-	display: inline-block;
+	@include temp-block(200px, 300px);
 }
 #menuGlaze{
 	height: 100%;
@@ -108,12 +103,7 @@ TABLE OF CONTENTS
 }
 /* Home */
 #homeContainer{
-	@include test-border;
-	height: auto;
-	width: auto;
-	min-height: 5000px;
-	max-width: 80%;
-	margin: 0px auto;
+	@include temp-div(1000px, 80%);
 }
 /* Order */
 #orderContainer{

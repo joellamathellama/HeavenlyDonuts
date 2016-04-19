@@ -13,7 +13,7 @@ const config = {
   paths: {
     html: './client/*.html',
     js: './client/**/*.js',
-    myscss: './client/scss/**/*.scss',
+    myscss: './client/**/*.scss',
     scss: [
       './client/scss/style.scss'
     ],

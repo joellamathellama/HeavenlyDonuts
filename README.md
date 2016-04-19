@@ -5,6 +5,7 @@ Site status: It's more of a boilerplate so far.
 ### Tech stack
 - React
 - Redux
+- Sass
 - Gulp
 - Express
 - Browserify
