@@ -15,5 +15,9 @@ export const NavButtons = ({sts, dsp}) => (
 		<div className="btn-group" role="group">
 			<button type="button" className="btn btn-default" onClick={dsp.goLocation}>Location</button>
 		</div>
+		{/* Order */}
+		<div className="btn-group" role="group">
+			<button type="button" className="btn btn-default" onClick={dsp.goOrder}>Order</button>
+		</div>
 	</div>
 )

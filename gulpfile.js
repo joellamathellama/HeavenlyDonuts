@@ -1,5 +1,8 @@
+'use strict';
+
 // Packages
 const gulp       = require('gulp')
+const sass       = require('gulp-sass');
 const browserify = require('browserify')
 const source     = require('vinyl-source-stream')
 const concat     = require('gulp-concat')
@@ -10,9 +13,9 @@ const config = {
   paths: {
     html: './client/*.html',
     js: './client/**/*.js',
-    mycss: './client/*.css',
-    css: [
-      './client/style.css'
+    myscss: './client/*.scss',
+    scss: [
+      './client/style.scss'
     ],
     dist: './dist',
     appJs: './client/app.js'
@@ -34,12 +37,17 @@ gulp.task('js', function(){
     .pipe(gulp.dest(config.paths.dist + '/scripts'))
 })
 // Concat into the dist folder
-gulp.task('css', function(){
-  gulp.src(config.paths.css)
-    .pipe(concat('bundle.css'))
-    .on('error', console.error.bind(console))
+//gulp.task('css', function(){
+//  gulp.src(config.paths.css)
+//    .pipe(concat('bundle.css'))
+//    .on('error', console.error.bind(console))
+//    .pipe(gulp.dest(config.paths.dist + '/css'))
+//})
+gulp.task('scss', function () {
+  return gulp.src(config.paths.scss)
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest(config.paths.dist + '/css'))
-})
+});
 // Linter(NOT IN USE)
 gulp.task('lint', function() {
   return gulp.src(config.paths.js)
@@ -50,9 +58,13 @@ gulp.task('lint', function() {
 gulp.task('watch', function() {
    gulp.watch(config.paths.html, ['html'])
    gulp.watch(config.paths.js, ['js'])
-   gulp.watch(config.paths.mycss, ['css'])
+   gulp.watch(config.paths.mycss, ['scss'])
 })
+// we'll see if I need this
+//gulp.task('sass:watch', function () {
+//  gulp.watch('./sass/**/*.scss', ['sass']);
+//});
 // 'default' bundles html, js, and css
 // 'dev' bundles & runs the 'watch' task
-gulp.task('default', ['html', 'js', 'css'])
-gulp.task('dev', ['html', 'js', 'css', 'watch'])
+gulp.task('default', ['html', 'js', 'scss'])
+gulp.task('dev', ['html', 'js', 'scss', 'watch'])

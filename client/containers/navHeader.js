@@ -39,6 +39,9 @@ const mapDispatchToProps = function(dispatch) {
 			},
 			goLocation() {
 				browserHistory.push('/location');
+			},
+			goOrder() {
+				browserHistory.push('/order');
 			}
 		}
 	};
