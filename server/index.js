@@ -16,7 +16,7 @@ routes.use(express.static(assetFolder));
 
 routes.get('/test', function(req, res) {
 	res.status(200).json(mockData);
-})
+});
 
 // Example route
 // routes.get('/', function(req, res) {
