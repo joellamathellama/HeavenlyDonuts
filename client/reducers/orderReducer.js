@@ -1,7 +1,7 @@
 
 export const Order = (state, action) => {
   if(state === undefined){
-    return state = {};
+    return {};
   }
   switch(action.type){
   	default:

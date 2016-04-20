@@ -13,4 +13,4 @@ export const testCall = function() {
 				console.error("/test error", err);
 			});
 	};
-}
+};

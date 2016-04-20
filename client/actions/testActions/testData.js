@@ -5,4 +5,4 @@ export const testData = {
 			mockData: data
 		};
 	}
-}
+};

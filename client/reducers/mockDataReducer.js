@@ -1,6 +1,6 @@
 export const mockData = (state, action) => {
   if(state === undefined){
-    return state = {};
+    return {};
   }
   switch(action.type){
   	case 'UPDATE':

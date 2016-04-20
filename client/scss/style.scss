@@ -86,21 +86,27 @@ TABLE OF CONTENTS
   opacity: 1;
   transition: opacity 300ms ease-in;
 }
-
-.donut{
-	@include temp-block(200px, 300px);
-}
 #menuGlaze{
 	height: 100%;
 	width: 100%;
 	padding: 15px 15px 15px 15px;
-	border: 25px solid silver;
 }
 #menuChoco{
 	height: 100%;
 	width: 100%;
 	padding: 15px 15px 15px 15px;
-	border: 25px solid silver;
+}
+.thumbnail{
+	max-height: 500px;
+	max-width: 400px;
+	margin: 0px auto;
+	display: inline-grid;
+}
+.thumbImage{
+	height: auto;
+	width: auto;
+	max-height: 200px;
+	max-width: 300px;
 }
 /* Home */
 #homeContainer{
