@@ -2,12 +2,13 @@
 
 // Packages
 const gulp       = require('gulp')
+const server     = require('gulp-express');
 const sass       = require('gulp-sass');
 const browserify = require('browserify')
 const source     = require('vinyl-source-stream')
 const concat     = require('gulp-concat')
 const babelify   = require('babelify')
-const lint       = require('gulp-eslint')
+//const lint       = require('gulp-eslint')
 // Shortcuts
 const config = {
   paths: {
@@ -21,6 +22,14 @@ const config = {
     appJs: './client/app.js'
   }
 }
+// Server
+gulp.task('server', function() {
+  server.run(['server/index.js']);
+  // watch tasks to reset the server
+  gulp.watch([config.paths.html], server.notify);
+  gulp.watch([config.paths.myscss], server.notify);
+  gulp.watch([config.paths.js], [server.run]);
+})
 // Copy & pastes index.html into the dist folder
 gulp.task('html', function(){
   gulp.src(config.paths.html)
@@ -43,11 +52,11 @@ gulp.task('scss', function () {
     .pipe(gulp.dest(config.paths.dist + '/css'))
 });
 // Linter(NOT IN USE)
-gulp.task('lint', function() {
-  return gulp.src(config.paths.js)
-    .pipe(lint({config: 'eslint.config.json'}))
-    .pipe(lint.format())
-})
+//gulp.task('lint', function() {
+//  return gulp.src(config.paths.js)
+//    .pipe(lint({config: 'eslint.config.json'}))
+//    .pipe(lint.format())
+//})
 // Rebundle on .js & .html changes
 gulp.task('watch', function() {
    gulp.watch(config.paths.html, ['html'])
@@ -60,5 +69,5 @@ gulp.task('watch', function() {
 //});
 // 'default' bundles html, js, and css
 // 'dev' bundles & runs the 'watch' task
-gulp.task('default', ['html', 'js', 'scss'])
-gulp.task('dev', ['html', 'js', 'scss', 'watch'])
+gulp.task('default', ['html', 'js', 'scss', 'server'])
+gulp.task('dev', ['html', 'js', 'scss', 'watch', 'server'])

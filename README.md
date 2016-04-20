@@ -5,8 +5,9 @@ Site status: It's more of a boilerplate so far.
 ### Tech stack
 - React
 - Redux
-- Sass
 - Gulp
+- Gulp-sass
+- Gulp-connect
 - Express
 - Browserify
 - Babelify
@@ -16,9 +17,7 @@ Site status: It's more of a boilerplate so far.
 
 $ npm install
 
-$ npm start
-
-$ gulp dev
+$ npm run dev
 <hr/>
 ##### Heroku Link
 https://mock-donut-store.herokuapp.com/

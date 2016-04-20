@@ -4,7 +4,8 @@
   "description": "Donut Website",
   "main": "index.js",
   "scripts": {
-    "start": "node server/index.js --ignore client/",
+    "start": "gulp default",
+    "dev": "gulp dev",
     "postinstall": "gulp default"
   },
   "author": "Joel Ahn",
@@ -23,6 +24,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-connect": "^2.2.0",
     "gulp-eslint": "^0.15.0",
+    "gulp-express": "^0.3.5",
     "gulp-open": "^1.0.0",
     "gulp-sass": "^2.2.0",
     "jquery": "^2.2.1",
