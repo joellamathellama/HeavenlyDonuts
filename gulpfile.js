@@ -65,5 +65,5 @@ gulp.task('watch', function() {
 })
 // 'default' bundles html, js, and css
 // 'dev' bundles & runs the 'watch' task
-gulp.task('default', ['html', 'js', 'scss', 'server'])
+gulp.task('default', ['html', 'js', 'scss'])
 gulp.task('dev', ['html', 'js', 'scss', 'watch', 'server'])
