@@ -1,8 +1,5 @@
 
-export const Order = (state, action) => {
-  if(state === undefined){
-    return {};
-  }
+export const Order = (state = {}, action) => {
   switch(action.type){
   	default:
   		return state;
