@@ -26,9 +26,9 @@ const config = {
 gulp.task('server', function() {
   server.run(['server/index.js']);
   // watch tasks to reset the server
-  gulp.watch([config.paths.html], server.notify);
-  gulp.watch([config.paths.myscss], server.notify);
-  gulp.watch([config.paths.js], [server.run]);
+  //gulp.watch([config.paths.html], server.notify);
+  //gulp.watch([config.paths.myscss], server.notify);
+  //gulp.watch([config.paths.js], server.notify);
 })
 // Copy & pastes index.html into the dist folder
 gulp.task('html', function(){
@@ -63,10 +63,6 @@ gulp.task('watch', function() {
    gulp.watch(config.paths.js, ['js'])
    gulp.watch(config.paths.myscss, ['scss'])
 })
-// we'll see if I need this
-//gulp.task('sass:watch', function () {
-//  gulp.watch('./sass/**/*.scss', ['sass']);
-//});
 // 'default' bundles html, js, and css
 // 'dev' bundles & runs the 'watch' task
 gulp.task('default', ['html', 'js', 'scss', 'server'])

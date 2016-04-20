@@ -3,16 +3,21 @@ import * as React from 'react';
 import {connect} from 'react-redux';
 const R = require('react-addons-css-transition-group');
 // Files
-import {MockData} from '../../server/mockData';
-
+import {testCall} from '../api/testApi/testCalls';
+import {ChocoList} from '../components/menuComps/mainMenu/chocoList';
+import {GlazeList} from '../components/menuComps/mainMenu/glazeList';
+// Menu Component
 const MenuPage = React.createClass({
 	getInitialState() {
 		return {
-			mockList: MockData,
+			mockData: {},
 			mainMenu: true,
 			glaze: false,
 			choco: false
 		};
+	},
+	componentWillMount() {
+		this.props.dsp.mockData();
 	},
 	showMain() {
 		this.setState({glaze: false, choco: false});
@@ -48,23 +53,13 @@ const MenuPage = React.createClass({
 		      	{this.state.glaze && 
 		      		<div id="menuGlaze">
 			      		<h1>Glaze</h1>
-			      		{this.state.mockList.glaze.map((item, count) => (
-			      			<div className="donut" key={count}>
-			      				<h5>{item.name}</h5>
-			      				<p>{item.description}</p>
-			      			</div>
-			      		))}
+			      		<GlazeList glazeList={this.props.sts.mockData.glaze}/>
 			      	</div>
 		      	}
 		      	{this.state.choco && 
 		      		<div id="menuChoco">
 			      		<h1>Chocolate</h1>
-				      		{this.state.mockList.choco.map((item, count) => (
-				      			<div className="donut" key={count}>
-				      				<h5>{item.name}</h5>
-				      				<p>{item.description}</p>
-			      				</div>
-				      		))}
+			      		<ChocoList chocoList={this.props.sts.mockData.choco}/>
 			      	</div>
 		      	}
     			</R>
@@ -76,13 +71,19 @@ const MenuPage = React.createClass({
 
 const mapStateToProps = (state) => {
 	return {
-
+		sts: {
+			mockData: state.mockData
+		}
 	};
 }
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-
+		dsp: {
+			mockData() {
+				dispatch(testCall());
+			}
+		}
 	};
 }
 

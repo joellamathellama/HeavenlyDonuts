@@ -5,12 +5,18 @@ const bodyParser = require('body-parser');
 const routes = express.Router();
 // Path
 const assetFolder = Path.resolve(__dirname, '../dist');
+// Mock Data
+const mockData = require('./mockData');
 
 routes.use(express.static(assetFolder));
 
 // routes.get('/bundle.js', function(req,res) {
 // 	res.sendFile(assetFolder + '/scripts/bundle.js');
 // });
+
+routes.get('/test', function(req, res) {
+	res.status(200).json(mockData);
+})
 
 // Example route
 // routes.get('/', function(req, res) {

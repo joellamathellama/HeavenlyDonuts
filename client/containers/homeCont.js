@@ -4,7 +4,6 @@ import {RoadWork} from '../components/alerts/roadWork';
 
 const homePage = () => (
 	<div id="homeContainer">
-		aklsdfjakl;sdj
 	</div>
 );
 

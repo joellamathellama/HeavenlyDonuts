@@ -1,4 +1,4 @@
-export const MockData = {
+const MockData = {
 glaze: [
 	{
 		name: "Glaze Donut",
@@ -20,3 +20,5 @@ choco: [
 	}
 ]
 };
+
+module.exports = MockData;
