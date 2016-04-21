@@ -7,14 +7,16 @@ const routes = express.Router();
 const assetFolder = Path.resolve(__dirname, '../dist');
 // Mock Data
 const mockData = require('./mockData');
-
+// console.log("index.js file called");
 routes.use(express.static(assetFolder));
 
-// routes.get('/bundle.js', function(req,res) {
-// 	res.sendFile(assetFolder + '/scripts/bundle.js');
-// });
+routes.get('/bundle.js', function(req,res) {
+	// console.log("/bundle called: ", assetFolder + '/scripts/bundle.js');
+	res.sendFile(assetFolder + '/scripts/bundle.js');
+});
 
 routes.get('/test', function(req, res) {
+	// console.log("/test called");
 	res.status(200).json(mockData);
 });
 
@@ -24,6 +26,7 @@ routes.get('/test', function(req, res) {
 // })
 // Catch-all route
 routes.get('/*', function(req,res) {
+	// console.log("/* called: ", assetFolder + '/index.html');
 	res.sendFile(assetFolder + '/index.html');
 });
 

@@ -20,7 +20,7 @@ const navHeader = function({sts, dsp}) {
 }
 
 const mapStateToProps = function(state) {
-	console.info("Container State: ", state);
+	console.info("State object: ", state);
 	return {
 		sts:{
 

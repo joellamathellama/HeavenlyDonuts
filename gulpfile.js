@@ -1,13 +1,13 @@
 'use strict';
 
 // Packages
-const gulp       = require('gulp')
+const gulp       = require('gulp');
 const server     = require('gulp-express');
 const sass       = require('gulp-sass');
-const browserify = require('browserify')
-const source     = require('vinyl-source-stream')
-const concat     = require('gulp-concat')
-const babelify   = require('babelify')
+const browserify = require('browserify');
+const source     = require('vinyl-source-stream');
+const concat     = require('gulp-concat');
+const babelify   = require('babelify');
 //const lint       = require('gulp-eslint')
 // Shortcuts
 const config = {

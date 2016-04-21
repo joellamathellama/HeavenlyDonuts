@@ -1,6 +1,6 @@
 # Mock Website for a fake donut store
 
-Site status: It's more of a boilerplate so far.
+Currently testing things out.
 
 ### Tech stack
 - React
