@@ -4,8 +4,8 @@ import {connect} from 'react-redux';
 const R = require('react-addons-css-transition-group');
 // Files
 import {testCall} from '../api/testApi/testCalls';
-import {ChocoList} from '../components/menuComps/mainMenu/chocoList';
-import {GlazeList} from '../components/menuComps/mainMenu/glazeList';
+import {ChocoList} from '../components/menuComps/mainMenu/chocoList.jsx';
+import {GlazeList} from '../components/menuComps/mainMenu/glazeList.jsx';
 // Menu Component
 const MenuPage = React.createClass({
 	getInitialState() {

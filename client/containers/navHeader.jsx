@@ -3,7 +3,7 @@ import * as React from 'react';
 import {connect} from 'react-redux';
 import {browserHistory} from 'react-router';
 // Component
-import {NavButtons} from '../components/navBarComps/navButtons';
+import {NavButtons} from '../components/navBarComps/navButtons.jsx';
 
 const navHeader = function({sts, dsp}) {
 	return (
@@ -20,7 +20,7 @@ const navHeader = function({sts, dsp}) {
 }
 
 const mapStateToProps = function(state) {
-	console.info("State object: ", state);
+	console.info("Container State: ", state);
 	return {
 		sts:{
 

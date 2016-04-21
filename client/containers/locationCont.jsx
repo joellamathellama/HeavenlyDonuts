@@ -1,6 +1,7 @@
+"use strict";
 import * as React from 'react';
 import {connect} from "react-redux";
-import {RoadWork} from '../components/alerts/roadWork';
+import {RoadWork} from '../components/alerts/roadWork.jsx';
 
 const ourLocation = () => (
 	<div>

@@ -5,11 +5,11 @@ import {Provider} from 'react-redux';
 import {Route, Router, browserHistory} from 'react-router';
 import {syncHistoryWithStore} from 'react-router-redux';
 // Components
-import {NavHeader} from './containers/navHeader';
-import {HomeContainer} from './containers/homeCont';
-import {MenuContainer} from './containers/menuCont';
-import {LocContainer} from './containers/locationCont';
-import {OrderContainer} from './containers/orderCont';
+import {NavHeader} from './containers/navHeader.jsx';
+import {HomeContainer} from './containers/homeCont.jsx';
+import {MenuContainer} from './containers/menuCont.jsx';
+import {LocContainer} from './containers/locationCont.jsx';
+import {OrderContainer} from './containers/orderCont.jsx';
 // Store
 import {Store} from './store';
 const store = Store();

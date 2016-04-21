@@ -13,13 +13,16 @@ const babelify   = require('babelify');
 const config = {
   paths: {
     html: './client/*.html',
-    js: './client/**/*.js',
+    js: [
+      './client/**/*.jsx',
+      './client/**/*.js'
+    ],
     myscss: './client/**/*.scss',
     scss: [
       './client/scss/style.scss'
     ],
     dist: './dist',
-    appJs: './client/app.js'
+    appJs: './client/app.jsx'
   }
 }
 // Server
