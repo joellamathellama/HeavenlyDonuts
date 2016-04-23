@@ -1,6 +1,6 @@
 # Mock Website for a fake donut store
 
-Currently testing things out.
+Status: Fresh app, currently testing things out.
 
 ### Tech stack
 - React
