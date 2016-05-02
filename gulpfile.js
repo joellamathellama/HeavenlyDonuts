@@ -54,12 +54,6 @@ gulp.task('scss', function () {
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(config.paths.dist + '/css'))
 });
-// Linter(NOT IN USE)
-//gulp.task('lint', function() {
-//  return gulp.src(config.paths.js)
-//    .pipe(lint({config: 'eslint.config.json'}))
-//    .pipe(lint.format())
-//})
 // Rebundle on .js & .html changes
 gulp.task('watch', function() {
    gulp.watch(config.paths.html, ['html'])

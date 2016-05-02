@@ -1,5 +1,4 @@
 /* Other .scss file imports */
-/*@import './common/development/devProps';*/
 @import './common/development/devProps';
 
 /* 
@@ -11,52 +10,26 @@ TABLE OF CONTENTS
 - Order
 */
 
+/* App */
+body{
+	background-color: #FFF4C9;
+}
+#app{
+	padding-left: 200px;
+	padding-right: 200px;
+}
+
 /* Alerts */
-#travoltaGIF{
-	height: auto;
-	width: auto;
-	max-height: 200px; 
-	max-width: 150px;
-}
-#loadingGIF{
-	height: auto;
-	width: auto;
-	max-height: 300px; 
-	max-width: 250px;
-
-}
+@import './partials/alerts';
 /* NavBar */
-.jumbotron{
-	padding-top: 5px;
-	padding-bottom: 0px;
-	margin-bottom: 25px;
-}
-#navName h1{
-	float: left;
-	height: 75px;
-	width: 550px;
-	margin: 0px 0px 0px 0px;
-	padding: 0px 0px 0px 0px;
-}
-#navRight{
-	float: right;
-	height: 75px;
-	width: 250px;
-	margin: 0px 0px 0px 0px;
-	padding: 0px 0px 0px 0px;
-}
+@import './partials/navbar';
 /* Menu */
-#mainMenu{
+@import './partials/menu';
+/* Home */
+@import './partials/home';
+/* Order */
+@import './partials/order';
 
-}
-.navMenu{
-	height: auto;
-	width: auto;
-	margin: 10px 10px 10px 10px;
-	padding: 0px 10px 0px 10px;
-	border: 3px solid black;
-	display: inline-block;
-}
 /* Save as reference */
 /*.example-enter {
   opacity: 0.0;
@@ -78,41 +51,3 @@ TABLE OF CONTENTS
 	transform: translate(0,750px,0);
 	transform: translate3d(0,750px,0);
 }*/
-
-.fadein-enter {
-  opacity: 0.0;
-}
-.fadein-enter.fadein-enter-active {
-  opacity: 1;
-  transition: opacity 300ms ease-in;
-}
-#menuGlaze{
-	height: 100%;
-	width: 100%;
-	padding: 15px 15px 15px 15px;
-}
-#menuChoco{
-	height: 100%;
-	width: 100%;
-	padding: 15px 15px 15px 15px;
-}
-.thumbnail{
-	max-height: 500px;
-	max-width: 400px;
-	margin: 0px auto;
-	display: inline-grid;
-}
-.thumbImage{
-	height: auto;
-	width: auto;
-	max-height: 200px;
-	max-width: 300px;
-}
-/* Home */
-#homeContainer{
-	@include temp-div(1000px, 80%);
-}
-/* Order */
-#orderContainer{
-
-}

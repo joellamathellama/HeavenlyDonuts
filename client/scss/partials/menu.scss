@@ -1,0 +1,40 @@
+#mainMenu{
+
+}
+.navMenu{
+	height: auto;
+	width: auto;
+	margin: 10px 10px 10px 10px;
+	padding: 0px 10px 0px 10px;
+	border: 3px solid black;
+	display: inline-block;
+}
+.fadein-enter {
+  opacity: 0.0;
+}
+.fadein-enter.fadein-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+#menuGlaze{
+	height: 100%;
+	width: 100%;
+	padding: 15px 15px 15px 15px;
+}
+#menuChoco{
+	height: 100%;
+	width: 100%;
+	padding: 15px 15px 15px 15px;
+}
+.thumbnail{
+	max-height: 500px;
+	max-width: 400px;
+	margin: 0px auto;
+	display: inline-grid;
+}
+.thumbImage{
+	height: auto;
+	width: auto;
+	max-height: 200px;
+	max-width: 300px;
+}

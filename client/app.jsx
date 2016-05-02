@@ -19,7 +19,7 @@ const history = syncHistoryWithStore(browserHistory, store);
 ReactDOM.render(
 	<Provider store={store}>
 			<div>
-				<NavHeader/>``
+				<NavHeader/>
 				<Router history={history}>
 						<Route path="/" component={HomeContainer}/>
 						<Route path="menu" component={MenuContainer}/>
