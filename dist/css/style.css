@@ -1,0 +1,123 @@
+/* Other .scss file imports */
+/* div sizing */
+/* 
+TABLE OF CONTENTS
+- Navbar
+- Alerts
+- Home
+- Menu
+- Order
+*/
+/* App */
+body {
+  background-color: #FFF4C9; }
+
+#app {
+  padding-left: 200px;
+  padding-right: 200px; }
+
+/* Alerts */
+#travoltaGIF {
+  height: auto;
+  width: auto;
+  max-height: 200px;
+  max-width: 150px; }
+
+#loadingGIF {
+  height: auto;
+  width: auto;
+  max-height: 300px;
+  max-width: 250px; }
+
+/* NavBar */
+.jumbotron {
+  padding-top: 5px;
+  padding-bottom: 0px;
+  margin-bottom: 25px; }
+
+#navName h1 {
+  float: left;
+  height: 75px;
+  width: 550px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px; }
+
+#navRight {
+  text-align: center;
+  float: right;
+  height: 75px;
+  width: 250px;
+  margin: 0px 0px 0px 0px;
+  padding: 10px 0px 0px 0px; }
+
+/* Menu */
+.navMenu {
+  height: auto;
+  width: auto;
+  margin: 10px 10px 10px 10px;
+  padding: 0px 10px 0px 10px;
+  border: 3px solid black;
+  display: inline-block; }
+
+.fadein-enter {
+  opacity: 0.0; }
+
+.fadein-enter.fadein-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in; }
+
+#menuGlaze {
+  height: 100%;
+  width: 100%;
+  padding: 15px 15px 15px 15px; }
+
+#menuChoco {
+  height: 100%;
+  width: 100%;
+  padding: 15px 15px 15px 15px; }
+
+.thumbnail {
+  max-height: 500px;
+  max-width: 400px;
+  margin: 0px auto;
+  display: inline-grid; }
+
+.thumbImage {
+  height: auto;
+  width: auto;
+  max-height: 200px;
+  max-width: 300px; }
+
+/* Home */
+#homeContainer {
+  min-height: 1000px;
+  min-width: 80%;
+  max-height: 1000px;
+  max-width: 80%;
+  border: 5px solid #edb385;
+  margin: 0px auto;
+  padding: 10px 10px 10px 10px;
+  display: block; }
+
+/* Order */
+/* Save as reference */
+/*.example-enter {
+  opacity: 0.0;
+}
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 5000ms ease-in;
+}
+.example-leave {
+	opacity: 1;
+	transform: translate(0,0,0);
+	transform: translate3d(0,0,0);
+	transition-property: transform, opacity;
+	transition-duration: 500ms;
+	transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+}
+.example-leave.example-leave-active {
+	opacity: 0;
+	transform: translate(0,750px,0);
+	transform: translate3d(0,750px,0);
+}*/
