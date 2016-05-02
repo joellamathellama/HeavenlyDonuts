@@ -4,9 +4,11 @@
 const gulp       = require('gulp');
 const server     = require('gulp-express');
 const sass       = require('gulp-sass');
+const concat     = require('gulp-concat');
+const uglify     = require('gulp-uglify');
 const browserify = require('browserify');
 const source     = require('vinyl-source-stream');
-const concat     = require('gulp-concat');
+const buff       = require('vinyl-buffer');
 const babelify   = require('babelify');
 //const lint       = require('gulp-eslint')
 // Shortcuts
@@ -46,6 +48,16 @@ gulp.task('js', function(){
     .bundle()
     .on('error', console.error.bind(console))
     .pipe(source('bundle.js'))
+    .pipe(buff())
+    .pipe(uglify())
+    .pipe(gulp.dest(config.paths.dist + '/scripts'))
+})
+gulp.task('jsdev', function(){
+  browserify(config.paths.appJs)
+    .transform(babelify, {presets: ["es2015", "react", "stage-0"]})
+    .bundle()
+    .on('error', console.error.bind(console))
+    .pipe(source('bundle.js'))
     .pipe(gulp.dest(config.paths.dist + '/scripts'))
 })
 // Convert and compile scss > css
@@ -60,7 +72,8 @@ gulp.task('watch', function() {
    gulp.watch(config.paths.js, ['js'])
    gulp.watch(config.paths.myscss, ['scss'])
 })
-// 'default' bundles html, js, and css
+// 'default' & 'ugly' bundles html, js, and css
 // 'dev' bundles & runs the 'watch' task
 gulp.task('default', ['html', 'js', 'scss'])
-gulp.task('dev', ['html', 'js', 'scss', 'watch', 'server'])
+gulp.task('ugly', ['html', 'js', 'scss'])
+gulp.task('dev', ['html', 'jsdev', 'scss', 'watch', 'server'])
