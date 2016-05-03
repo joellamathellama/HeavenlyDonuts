@@ -40,4 +40,5 @@ app.use('/', routes);
 // Start server
 const port = process.env.PORT || 8000;
 app.listen(port);
+console.log("Environment: ", process.env.NODE_ENV);
 console.log("Express server listening on port: ", port);

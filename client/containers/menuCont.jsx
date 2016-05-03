@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 const R = require('react-addons-css-transition-group');
 // Files
 import {testCall} from '../api/testApi/testCalls';
-import {NavMenu} from '../components/menuComps/mainMenu/navMenu.jsx';
+import {MenuNav} from '../components/menuComps/mainMenu/menuNav.jsx';
 import {ChocoList} from '../components/menuComps/mainMenu/chocoList.jsx';
 import {GlazeList} from '../components/menuComps/mainMenu/glazeList.jsx';
 // Menu Component
@@ -42,10 +42,10 @@ const MenuPage = React.createClass({
 		return (
 			<div>
 				<center>
-					<div className="navMenu"><a href="#" onClick={this.showMain}><b><u>Main Menu</u></b></a></div>
+					<div className="menuNav"><a href="#" onClick={this.showMain}><b><u>Main Menu</u></b></a></div>
 					<R transitionName="fadein" transitionEnterTimeout={300} transitionLeaveTimeout={1}>
 						{this.state.mainMenu &&
-							<NavMenu showGlaze={this.showGlaze} showChoco={this.showChoco}/>
+							<MenuNav showGlaze={this.showGlaze} showChoco={this.showChoco}/>
 						}
 		      	{this.state.glaze && 
 		      		<div id="menuGlaze">

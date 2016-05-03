@@ -5,19 +5,43 @@ import {browserHistory} from 'react-router';
 // Component
 import {NavButtons} from '../components/navBarComps/navButtons.jsx';
 
-const navHeader = ({sts, dsp}) => (
-	<div className="jumbotron">
-		<div id="navName">
-			<h1>Donut Store</h1>
-		</div>
-		<div id="navRight">
-				We're open <b>Everyday</b>!
-				<br/>
-				5:00 am - 12:00 pm
-		</div>
-		<NavButtons sts={sts} dsp={dsp}/>
-	</div>
-);
+// const navHeader = ({sts, dsp}) => (
+// 	<div className="jumbotron">
+// 		<div id="navName">
+// 			<h1>Donut Store</h1>
+// 		</div>
+// 		<div id="navRight">
+// 				We&#39;re open <b>Everyday</b>!
+// 				<br/>
+// 				5:00 am - 12:00 pm
+// 				<br/>
+// 				Exeptions during <b>Holidays</b>
+// 		</div>
+// 		<NavButtons sts={sts} dsp={dsp}/>
+// 	</div>
+// );
+
+const navHeader = React.createClass({
+	render(){
+		return (
+			<div className="jumbotron">
+				<div id="navName">
+					<h1>Donut Store</h1>
+				</div>
+				<div id="navRight">
+						We&#39;re open <b>Everyday</b>!
+						<br/>
+						5:00 am - 12:00 pm
+						<br/>
+						Exeptions during <b>Holidays</b>
+				</div>
+				<NavButtons sts={this.props.sts} dsp={this.props.dsp}/>
+				{console.log("props", this.props)}
+				{this.props.children}
+			</div>
+		);
+	}
+});
 
 const mapStateToProps = (state) => {
 	console.info("Container State: ", state);

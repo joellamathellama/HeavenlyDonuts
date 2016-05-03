@@ -6,7 +6,7 @@ export const RoadWork = () => (
 		<center>
 			<img id="travoltaGIF" src="http://i.imgur.com/qhMbkGi.gif"/>
 			<h1>This page is down!</h1>
-			<h3>Reason: It's under construction!</h3>
+			<h3>Reason: It&#39;s under construction!</h3>
 		</center>
 	</div>
 )
