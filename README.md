@@ -8,6 +8,7 @@ Status: Fresh app, currently testing things out.
 - Gulp
 - Gulp-sass
 - Gulp-connect
+- Gulp-uglify
 - Express
 - Browserify
 - Babelify
