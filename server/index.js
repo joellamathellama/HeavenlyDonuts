@@ -1,6 +1,8 @@
 const express    = require('express');
 const Path       = require('path');
 const bodyParser = require('body-parser');
+// DB
+// const db 				 = require('./knexfile');
 // Server routes
 const routes = express.Router();
 // Path
