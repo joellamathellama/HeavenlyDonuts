@@ -12,10 +12,10 @@ const mockData = require('./mockData');
 // console.log("index.js file called");
 routes.use(express.static(assetFolder));
 
-routes.get('/bundle.js', function(req,res) {
-	// console.log("/bundle called: ", assetFolder + '/scripts/bundle.js');
-	res.sendFile(assetFolder + '/scripts/bundle.js');
-});
+// routes.get('/bundle.js', function(req,res) {
+// 	// console.log("/bundle called: ", assetFolder + '/scripts/bundle.js');
+// 	res.sendFile(assetFolder + '/scripts/bundle.js');
+// });
 
 routes.get('/test', function(req, res) {
 	// console.log("/test called");

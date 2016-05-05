@@ -21,6 +21,8 @@ const config = {
     ],
     myscss: './client/**/*.scss',
     scss: [
+      'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css',
+      'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
       './client/scss/style.scss'
     ],
     dist: './dist',
