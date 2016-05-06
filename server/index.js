@@ -1,14 +1,13 @@
-const express    = require('express');
-const Path       = require('path');
-const bodyParser = require('body-parser');
-// DB
-// const db 				 = require('./knexfile');
+// Packages
+const express     = require('express');
+const Path        = require('path');
+const bodyParser  = require('body-parser');
+// Database
+const db 					= require('./db');
 // Server routes
-const routes = express.Router();
+const routes      = express.Router();
 // Path
 const assetFolder = Path.resolve(__dirname, '../dist');
-// Mock Data
-const mockData = require('./mockData');
 // console.log("index.js file called");
 routes.use(express.static(assetFolder));
 
@@ -18,8 +17,8 @@ routes.use(express.static(assetFolder));
 // });
 
 routes.get('/test', function(req, res) {
-	// console.log("/test called");
-	res.status(200).json(mockData);
+	console.log("/test called, but currently implementing SQLite so JUST WAIT GOSH!");
+	// res.status(200).json(mockData);
 });
 
 // Example route

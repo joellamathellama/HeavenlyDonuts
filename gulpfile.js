@@ -10,7 +10,6 @@ const browserify = require('browserify');
 const source     = require('vinyl-source-stream');
 const buff       = require('vinyl-buffer');
 const babelify   = require('babelify');
-//const lint       = require('gulp-eslint')
 // Shortcuts
 const config = {
   paths: {
@@ -21,8 +20,6 @@ const config = {
     ],
     myscss: './client/**/*.scss',
     scss: [
-      'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css',
-      'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
       './client/scss/style.scss'
     ],
     dist: './dist',
