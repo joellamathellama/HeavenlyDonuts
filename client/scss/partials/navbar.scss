@@ -5,16 +5,20 @@
 }
 #navName h1{
 	float: left;
-	height: 75px;
-	width: 550px;
+	height: auto;
+	width: auto;
+	max-height: 75px;
+	max-width: 550px;
 	margin: 0px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
 }
 #navRight{
 	text-align: center;
 	float: right;
-	height: 75px;
-	width: 250px;
+	height: auto;
+	width: auto;
+	max-height: 75px;
+	max-width: 250px;
 	margin: 0px 0px 0px 0px;
 	padding: 10px 0px 0px 0px;
 }

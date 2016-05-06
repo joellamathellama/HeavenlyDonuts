@@ -1,8 +1,8 @@
 @import 'devStyles';
 
 @mixin temp-div($height, $width) {
-	min-height: $height;
-	min-width: $width;
+	height: auto;
+	width: auto;
 	max-height: $height;
 	max-width: $width;
 	border: $standard-border;
@@ -11,8 +11,8 @@
 	display: block;
 }
 @mixin temp-block($height, $width) {
-	min-height: $height;
-	min-width: $width;
+	height: auto;
+	width: auto;
 	max-height: $height;
 	max-width: $width;
 	border: $standard-border;

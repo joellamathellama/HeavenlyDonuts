@@ -33,6 +33,9 @@ module.exports = {
     migrations: {
       directory: path.join(__dirname, '/server/migrations')
     },
+    seeds: {
+        directory: path.join(__dirname, '/server/seeds')
+    },
     useNullAsDefault: true
   }
 };

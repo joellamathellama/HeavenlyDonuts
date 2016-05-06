@@ -3,63 +3,21 @@ import * as React from 'react';
 import {connect} from 'react-redux';
 const R = require('react-addons-css-transition-group');
 // Files
-import {testCall} from '../api/testApi/testCalls';
-import {MenuNav} from '../components/menuComps/mainMenu/menuNav.jsx';
-import {ChocoList} from '../components/menuComps/mainMenu/chocoList.jsx';
-import {GlazeList} from '../components/menuComps/mainMenu/glazeList.jsx';
+import {menuListApi} from '../apis/menuListApi';
+import {MenuList} from '../components/menuComps/mainMenu/menuList.jsx';
 // Menu Component
 const MenuPage = React.createClass({
-	getInitialState() {
-		return {
-			mockData: {},
-			mainMenu: true,
-			glaze: false,
-			choco: false
-		};
-	},
 	componentWillMount() {
-		this.props.dsp.mockData();
-	},
-	showMain() {
-		this.setState({glaze: false, choco: false});
-		setTimeout(() => {
-			this.setState({mainMenu: true});
-		}, 100)
-	},
-	showGlaze() {
-		this.setState({mainMenu: false, choco: false});
-		setTimeout(() => {
-			this.setState({glaze: true});
-		}, 100)
-	},
-	showChoco() {
-		this.setState({mainMenu: false, glaze: false});
-		setTimeout(() => {
-			this.setState({choco: true});
-		}, 100)
+		this.props.dsp.menuList();
 	},
 	render() {
 		return (
 			<div>
 				<center>
-					<div className="menuNav"><a href="#" onClick={this.showMain}><b><u>Main Menu</u></b></a></div>
-					<R transitionName="fadein" transitionEnterTimeout={300} transitionLeaveTimeout={1}>
-						{this.state.mainMenu &&
-							<MenuNav showGlaze={this.showGlaze} showChoco={this.showChoco}/>
-						}
-		      	{this.state.glaze && 
-		      		<div id="menuGlaze">
-			      		<h1>Glaze</h1>
-			      		<GlazeList glazeList={this.props.sts.mockData.glaze}/>
-			      	</div>
-		      	}
-		      	{this.state.choco && 
-		      		<div id="menuChoco">
-			      		<h1>Chocolate</h1>
-			      		<ChocoList chocoList={this.props.sts.mockData.choco}/>
-			      	</div>
-		      	}
-    			</R>
+					<h1>Main Menu</h1>
+      		<div id="menuList">
+	      		<MenuList menuList={this.props.sts.menuList}/>
+	      	</div>
 	    	</center>
 			</div>
 		);
@@ -69,7 +27,7 @@ const MenuPage = React.createClass({
 const mapStateToProps = (state) => {
 	return {
 		sts: {
-			mockData: state.mockData
+			menuList: state.menuList
 		}
 	};
 }
@@ -77,8 +35,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return {
 		dsp: {
-			mockData() {
-				dispatch(testCall());
+			menuList() {
+				dispatch(menuListApi());
 			}
 		}
 	};

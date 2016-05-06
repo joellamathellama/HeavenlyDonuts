@@ -6,6 +6,8 @@ const bodyParser  = require('body-parser');
 const db 					= require('./db');
 // Server routes
 const routes      = express.Router();
+// Database
+const menu				= require('./apis/menu');
 // Path
 const assetFolder = Path.resolve(__dirname, '../dist');
 // console.log("index.js file called");
@@ -17,9 +19,19 @@ routes.use(express.static(assetFolder));
 // });
 
 routes.get('/test', function(req, res) {
-	console.log("/test called, but currently implementing SQLite so JUST WAIT GOSH!");
-	// res.status(200).json(mockData);
+	console.log("test call");
 });
+
+routes.get('/menuList', function(req, res) {
+	menu.menuList()
+		.then(function(data){
+			res.status(200).json({data: data});
+		})
+		.catch(function(err){
+			res.status(500).send('Something failed!');
+		})
+
+})
 
 // Example route
 // routes.get('/', function(req, res) {
