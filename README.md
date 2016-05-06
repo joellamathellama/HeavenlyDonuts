@@ -12,6 +12,8 @@ Status: Fresh app, currently testing things out.
 - Express
 - Browserify
 - Babelify
+- SQLite3
+- Knex
 
 <hr/>
 ##### Development
