@@ -3,7 +3,7 @@ import * as React from 'react';
 import {connect} from 'react-redux';
 import {browserHistory} from 'react-router';
 // Component
-import {NavButtons} from '../components/navBarComps/navButtons.jsx';
+import {NavButtons} from './button.component.jsx';
 
 const navHeader = ({sts, dsp, children}) => (
 	<div className="jumbotron">
@@ -35,7 +35,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return {
 		dsp:{
-			goHome() {
+			goHome() {// using this method instead of <Link>, for now.
 				browserHistory.push('/');
 			},
 			goMenu() {

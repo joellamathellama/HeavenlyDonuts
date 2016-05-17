@@ -5,7 +5,8 @@ const gulp       = require('gulp');
 const server     = require('gulp-express');
 const sass       = require('gulp-sass');
 const concat     = require('gulp-concat');
-const uglify     = require('gulp-uglify');
+const gzip       = require('gulp-gzip');
+const ugly       = require('gulp-uglify');
 const browserify = require('browserify');
 const source     = require('vinyl-source-stream');
 const buff       = require('vinyl-buffer');
@@ -48,7 +49,8 @@ gulp.task('js', function(){
     .on('error', console.error.bind(console))
     .pipe(source('bundle.js'))
     .pipe(buff())
-    .pipe(uglify())
+    .pipe(ugly())
+    // .pipe(gzip({append: false}))
     .pipe(gulp.dest(config.paths.dist + '/scripts'))
 })
 gulp.task('jsdev', function(){
@@ -71,8 +73,8 @@ gulp.task('watch', function() {
    gulp.watch(config.paths.js, ['js'])
    gulp.watch(config.paths.myscss, ['scss'])
 })
-// 'default' & 'ugly' bundles html, js, and css
+// 'default' & 'compress' bundles html, js, and css
 // 'dev' bundles & runs the 'watch' task
 gulp.task('default', ['html', 'js', 'scss'])
-gulp.task('ugly', ['html', 'js', 'scss'])
+gulp.task('compress', ['html', 'js', 'scss'])
 gulp.task('dev', ['html', 'jsdev', 'scss', 'watch', 'server'])

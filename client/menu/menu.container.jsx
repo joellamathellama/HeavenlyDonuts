@@ -3,8 +3,8 @@ import * as React from 'react';
 import {connect} from 'react-redux';
 const R = require('react-addons-css-transition-group');
 // Files
-import {menuListApi} from '../apis/menuListApi';
-import {MenuList} from '../components/menuComps/mainMenu/menuList.jsx';
+import {menuListApi} from './list.api.js';
+import {MenuList} from './list.component.jsx';
 // Menu Component
 const MenuPage = React.createClass({
 	componentWillMount() {

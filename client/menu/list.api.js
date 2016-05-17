@@ -1,4 +1,4 @@
-import {menuListAction} from '../actions/menuListAction/menuListAction';
+import {menuListAction} from './list.actions.js';
 
 export const menuListApi = () => {
 	return (dispatch) => {
