@@ -20,7 +20,13 @@ Status: Fresh app, currently testing things out.
 
 $ npm install
 
+$ knex migrate:latest
+
+$ knex seed:run
+
 $ npm run dev
+
+$ visit localhost:8000
 <hr/>
 ##### Heroku Link
 https://mock-donut-store.herokuapp.com/
