@@ -22,8 +22,6 @@ $ npm install
 
 $ knex migrate:latest
 
-$ knex seed:run
-
 $ npm run dev
 
 $ visit localhost:8000
