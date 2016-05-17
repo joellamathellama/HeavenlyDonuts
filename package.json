@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server/index.js --ignore client/",
     "dev": "gulp dev",
-    "postinstall": "gulp ugly"
+    "prestart": "gulp ugly"
   },
   "author": "Joel Ahn",
   "license": "ISC",
