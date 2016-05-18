@@ -11,7 +11,7 @@ module.exports = {
   development: {
     client: 'sqlite3',
     connection: {
-      filename: path.join(__dirname, '/server/db/donuts.sqlite')
+      filename: path.join(__dirname, '/server/donuts.sqlite')
     },
     migrations: {
       directory: path.join(__dirname, '/server/migrations')
@@ -28,7 +28,7 @@ module.exports = {
   production: {
     client: 'sqlite3',
     connection: {
-      filename: path.join(__dirname, '/server/db/donuts.sqlite')
+      filename: path.join(__dirname, '/server/donuts.sqlite')
     },
     migrations: {
       directory: path.join(__dirname, '/server/migrations')
