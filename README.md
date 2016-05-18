@@ -20,8 +20,6 @@ Status: Fresh app, currently testing things out.
 
 $ npm install
 
-$ knex migrate:latest
-
 $ npm run dev
 
 $ visit localhost:8000
