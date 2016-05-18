@@ -24,7 +24,6 @@ const navHeader = ({sts, dsp, children}) => (
 );
 
 const mapStateToProps = (state) => {
-	console.info("Container State: ", state);
 	return {
 		sts:{
 

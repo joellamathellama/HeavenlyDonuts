@@ -70,7 +70,7 @@ gulp.task('scss', function () {
 // Rebundle on .js & .html changes
 gulp.task('watch', function() {
    gulp.watch(config.paths.html, ['html'])
-   gulp.watch(config.paths.js, ['js'])
+   gulp.watch(config.paths.js, ['jsdev'])
    gulp.watch(config.paths.myscss, ['scss'])
 })
 // 'default' & 'compress' bundles html, js, and css

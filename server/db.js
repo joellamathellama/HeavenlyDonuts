@@ -4,7 +4,7 @@ const knex = require('knex')(config[env]);
 console.log("running in: ", env);
 module.exports = knex;
 
-if(env === 'development'){
+if(env === 'development' || env === 'production'){
 	knex.migrate.latest(config[env])
 		.then(function() {
 			return knex.seed.run();
