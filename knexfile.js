@@ -26,20 +26,7 @@ module.exports = {
     useNullAsDefault: true
   },
   production: {
-    client: 'sqlite3',
-    connection: {
-      filename: path.join(__dirname, '/server/donuts.sqlite')
-    },
-    migrations: {
-      directory: path.join(__dirname, '/server/migrations')
-    },
-    seeds: {
-        directory: path.join(__dirname, '/server/seeds')
-    },
-    useNullAsDefault: true
+    client: 'postgresql',
+    connection: process.env.DATABASE_URL
   }
 };
-// Sqlite connects directly to a disk file
-// Migrations to create the schema
-// useNullAsDefault was added due to a terminal warning.
-// Knex:warning - sqlite does not support inserting default values.
